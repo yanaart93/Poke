@@ -1,7 +1,7 @@
 import { Pokemon } from './classes.js';
+const card = document.querySelector('.card');
+const cardList = document.querySelector('.card-list');
 export const fillPokemonCard = (pokemon) => {
-    const card = document.querySelector('.card');
-    const cardList = document.querySelector('.card-list');
 
     const cloneCard = card.cloneNode(true);
     const title = cloneCard.querySelector('h3');
@@ -31,8 +31,8 @@ export const getPokemonByNameOrId = async (params) => {
             
             abilities: rawAbilities,
             sprites: { front_default: image },
+            
         } = result;
-        
         const serailizedAbilities = rawAbilities.map((el) => {
             const {
                 ability: { name },
@@ -45,4 +45,3 @@ export const getPokemonByNameOrId = async (params) => {
         throw Error('Покемон не найден')
     }
 };
-

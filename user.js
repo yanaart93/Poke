@@ -8,7 +8,9 @@ const login = document.querySelector('.login');
 
 clearBtn.addEventListener('click', () => {
     localStorage.setItem('user', '');
+    localStorage.setItem('newPokes', '')
     welcomeMsg.innerText = '';
+    window.location.reload()
 });
 
 login.addEventListener('submit', (event) => {

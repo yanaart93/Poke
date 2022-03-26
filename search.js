@@ -7,7 +7,8 @@ form.addEventListener('submit', async (event) => {
     const {
         pokemonName: { value },
     } = event.target;
-    
+
+
     if (!value) {
         alert('Введите имя покемона плиииз');
     } else {
